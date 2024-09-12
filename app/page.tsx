@@ -1,9 +1,9 @@
 import Image from "next/image"
-import { barlow, barlowCondensed, bellefair } from "./ui/fonts"
+import { barlowCondensed, bellefair } from "./ui/fonts"
 
 export default function Home() {
   return (
-    <main className="relative flex grow">
+    <main className="relative flex grow overflow-y-hidden">
 
       {/* Background Image */}
       <Image

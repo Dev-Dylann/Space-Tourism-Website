@@ -9,7 +9,7 @@ type Props = {
     }
 }
 
-export default async function Destination({ searchParams }: Props) {
+export default function Destination({ searchParams }: Props) {
 
     const { dest } = searchParams
     const destinations = data.destinations
@@ -24,18 +24,13 @@ export default async function Destination({ searchParams }: Props) {
         <main className="relative flex grow">
 
             {/* Background Image */}
-            <Image
-                src="/assets/destination-bg-desktop.png"
-                alt="Space Background | Destination"
-                fill
-                className="-z-[1] bg-fixed transition-all"
-            ></Image>
+            <div className="absolute top-0 left-0 w-full h-full -z-[1] bg-cover bg-[50%] bg-fixed" style={{ backgroundImage: "url('/assets/destination-bg-desktop.png')" }}></div>
 
             <section className='grow flex flex-col gap-8 pt-28 pb-6 px-6 items-center'>
-                <p className={`${barlowCondensed.className} flex gap-5 tracking-widest text-lg`}>
+                <h1 className={`${barlowCondensed.className} flex gap-5 tracking-widest text-lg`}>
                     <span className='font-bold opacity-25'>01</span>
                     PICK YOUR DESTINATION
-                </p>
+                </h1>
 
                 <Image
                     src={currentDestination?.images.png as string}
@@ -59,7 +54,7 @@ export default async function Destination({ searchParams }: Props) {
                     <p className='leading-8'>{currentDestination?.description}</p>
                 </article>
 
-                <div className='w-full border mt-4'></div>
+                <div className='w-full border mt-4 opacity-65'></div>
 
                 <article className='flex flex-col gap-5 text-center items-center'>
                     <div className='flex flex-col gap-2'>

@@ -19,7 +19,7 @@ export default function MobileNav({ navState, setNavState }: Props) {
     }, [path])
 
     return (
-        <aside className='fixed w-2/3 h-full top-0 -right-full backdrop-blur-2xl pl-8 py-6 flex flex-col gap-16 transition-all duration-300' style={navState ? { transform: 'translateX(-150%)' } : {}}>
+        <aside className='fixed w-2/3 h-full top-0 -right-full backdrop-blur-2xl pl-8 py-6 flex flex-col gap-16 transition-all duration-[750ms]' style={navState ? { transform: 'translateX(-150%)' } : {}}>
             <button onClick={() => setNavState(false)} className='p-2 w-fit mr-6 self-end rounded-md'>
                 <img src="/assets/xmark.svg" alt="Close Nav" />
             </button>
