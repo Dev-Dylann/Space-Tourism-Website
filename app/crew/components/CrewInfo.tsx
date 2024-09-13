@@ -32,14 +32,14 @@ export default function CrewInfo({ children, crewMember }: Props) {
     }, [crewMember])
 
     return (
-        <>
-            <article className="flex flex-col gap-4 items-center text-center my-5 transition-all duration-500" style={fade ? { opacity: 0 } : { opacity: 1 }}>
-                <h2 className={`${bellefair.className} text-2xl`}>
-                    <span className='opacity-60 block text-xl'>{data.role.toUpperCase()}</span>
+        <div className='flex flex-col gap-8 md:gap-12 items-center lg:grid lg:grid-cols-2 lg:grid-rows-[1fr,_auto] lg:my-auto'>
+            <article className="flex flex-col gap-4 items-center text-center my-5 transition-all duration-500 md:max-w-[75vw] lg:items-start lg:text-left lg:h-full lg:justify-center" style={fade ? { opacity: 0 } : { opacity: 1 }}>
+                <h2 className={`${bellefair.className} text-2xl md:text-4xl`}>
+                    <span className='opacity-50 block text-xl md:text-2xl md:pb-4'>{data.role.toUpperCase()}</span>
                     {data.name.toUpperCase()}
                 </h2>
 
-                <p className="leading-8">{data.bio}</p>
+                <p className="leading-8 text-blue-300">{data.bio}</p>
             </article>
 
             {children}
@@ -49,9 +49,9 @@ export default function CrewInfo({ children, crewMember }: Props) {
                 alt={`Crew: ${data.role} ${data.name}`}
                 width={541}
                 height={676}
-                className="w-3/4 transition-all duration-500"
+                className="w-3/4 transition-all duration-500 md:w-2/3 lg:col-start-2 lg:row-span-full lg:w-full"
                 style={fade ? { opacity: 0 } : { opacity: 1 }}
             />
-        </>
+        </div>
     )
 }
