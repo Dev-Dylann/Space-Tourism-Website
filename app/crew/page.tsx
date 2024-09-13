@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import data from '@/data.json'
 import { barlowCondensed, bellefair } from "../ui/fonts";
+import CrewInfo from "./components/CrewInfo";
 
 type Props = {
     searchParams: {
@@ -32,28 +33,13 @@ export default function Crew({ searchParams }: Props) {
                     MEET YOUR CREW
                 </h1>
 
-                <article className="flex flex-col gap-4 items-center text-center my-5">
-                    <h2 className={`${bellefair.className} text-2xl`}>
-                        <span className='opacity-60 block text-xl'>{currentCrew.role.toUpperCase()}</span>
-                        {currentCrew.name.toUpperCase()}
-                    </h2>
-
-                    <p className="leading-8">{currentCrew.bio}</p>
-                </article>
-
-                <div className="flex justify-center gap-6 my-6">
-                    {crewDetails.map((crewDetail, index) => (
-                        <Link key={`crew${index}`} href={`?id=${index + 1}`} className={index + 1 === Number(id) || id === undefined && index === 0 ? 'h-3 w-3 rounded-full bg-white' : 'h-3 w-3 rounded-full bg-white opacity-60'}></Link>
-                    ))}
-                </div>
-
-                <Image
-                    src={currentCrew.images.png}
-                    alt={`Crew: ${currentCrew.role} ${currentCrew.name}`}
-                    width={541}
-                    height={676}
-                    className="w-3/4"
-                />
+                <CrewInfo crewMember={currentCrew}>
+                    <div className="flex justify-center gap-6 my-6">
+                        {crewDetails.map((crewDetail, index) => (
+                            <Link key={`crew${index}`} href={`?id=${index + 1}`} className={index + 1 === Number(id) || id === undefined && index === 0 ? 'h-3 w-3 rounded-full bg-white' : 'h-3 w-3 rounded-full bg-white opacity-60'}></Link>
+                        ))}
+                    </div>
+                </CrewInfo>
             </section>
         </main>
     )

@@ -2,6 +2,7 @@ import Image from "next/image";
 import data from '@/data.json'
 import Link from "next/link";
 import { barlowCondensed, bellefair } from "../ui/fonts";
+import TechInfo from "./components/TechInfo";
 
 type Props = {
     searchParams: {
@@ -27,28 +28,13 @@ export default function Technology({ searchParams }: Props) {
                     SPACE LAUNCH 101
                 </h1>
 
-                <Image
-                    src={currentTech.images.portrait}
-                    alt={`Technology: ${currentTech.name}`}
-                    width={375}
-                    height={258}
-                    className="w-screen"
-                />
-
-                <div className={`${bellefair.className} flex justify-center gap-8 my-5`}>
-                    {technologies.map((tech, index) => (
-                        <Link key={`tech${index}`} href={`?id=${index + 1}`} className={index + 1 === Number(id) || id === undefined && index === 0 ? 'w-10 h-10 rounded-full bg-white text-black grid place-content-center text-lg' : 'w-10 h-10 rounded-full border grid place-content-center text-lg'}>{index + 1}</Link>
-                    ))}
-                </div>
-
-                <article className='px-6 flex flex-col gap-3 items-center text-center'>
-                    <p className={`${bellefair.className} text-lg opacity-65`}>THE TERMINOLOGY...</p>
-                    <h2 className={`${bellefair.className} text-2xl`}>
-                        {currentTech.name.toUpperCase()}
-                    </h2>
-
-                    <p className='leading-8'>{currentTech.description}</p>
-                </article>
+                <TechInfo technology={currentTech}>
+                    <div className={`${bellefair.className} flex justify-center gap-8 my-5`}>
+                        {technologies.map((tech, index) => (
+                            <Link key={`tech${index}`} href={`?id=${index + 1}`} className={index + 1 === Number(id) || id === undefined && index === 0 ? 'w-10 h-10 rounded-full bg-white text-black grid place-content-center text-lg' : 'w-10 h-10 rounded-full border grid place-content-center text-lg'}>{index + 1}</Link>
+                        ))}
+                    </div>
+                </TechInfo>
             </section>
         </main>
     )
