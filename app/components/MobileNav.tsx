@@ -1,31 +1,23 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation";
-import { barlowCondensed } from "../ui/fonts";
-import { useEffect } from "react";
 
 type Props = {
     navState: boolean,
-    setNavState: React.Dispatch<React.SetStateAction<boolean>>
+    setNavState: React.Dispatch<React.SetStateAction<boolean>>,
+    path: string,
+    links: string[],
 }
 
-export default function MobileNav({ navState, setNavState }: Props) {
-
-    const path = usePathname()
-
-    const links = ['home', 'destination', 'crew', 'technology']
-
-    useEffect(() => {
-        console.log(path)
-    }, [path])
+export default function MobileNav({ navState, setNavState, path, links }: Props) {
 
     return (
-        <aside className='fixed w-2/3 h-full top-0 -right-full backdrop-blur-2xl pl-8 py-6 flex flex-col gap-16 transition-all duration-[750ms]' style={navState ? { transform: 'translateX(-150%)' } : {}}>
+        <aside className='fixed w-2/3 h-full top-0 -right-full backdrop-blur-2xl pl-8 py-6 flex flex-col gap-16 transition-all duration-[750ms] md:hidden' style={navState ? { transform: 'translateX(-150%)' } : {}}>
             <button onClick={() => setNavState(false)} className='p-2 w-fit mr-6 self-end rounded-md'>
                 <img src="/assets/xmark.svg" alt="Close Nav" />
             </button>
 
             <nav>
-                <ul className={`${barlowCondensed.className} tracking-widest flex flex-col gap-8`}>
+                <ul className="tracking-widest flex flex-col gap-8">
                     {links.map((link, index) => (
                         <li key={`link${index}`} onClick={() => setNavState(false)} className={path.includes(link) || path === '/' && index === 0 ? 'border-r-4 flex' : 'flex'}>
                             <Link href={link !== 'home' ? link : '/'} className='w-full'>
