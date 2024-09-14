@@ -24,7 +24,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Home Page - Desktop View](./assets/home-desktop.jpg)
+![Destination Page - Desktop View](./assets/destination-desktop.jpg)
 
 ### Links
 
