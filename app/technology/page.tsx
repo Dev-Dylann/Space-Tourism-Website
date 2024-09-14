@@ -22,7 +22,7 @@ export default function Technology({ searchParams }: Props) {
             {/* Background Image */}
             <div className="absolute top-0 left-0 w-full h-full -z-[1] bg-cover bg-[50%] lg:bg-fixed" style={{ backgroundImage: "url('/assets/tech-bg.png')" }}></div>
 
-            <section className="grow flex flex-col gap-8 pt-28 pb-6 items-center md:pt-32 md:gap-20 md:pb-12 lg:pt-48 lg:gap-8 border">
+            <section className="grow flex flex-col gap-8 pt-28 pb-6 items-center md:pt-32 md:gap-20 md:pb-12 lg:pt-48 lg:gap-8">
                 <h1 className={`${barlowCondensed.className} flex gap-5 tracking-widest text-lg md:text-left md:w-full md:px-8 md:text-xl lg:px-10 lg:max-w-6xl lg:text-[28px] lg:self-start lg:mx-auto xl:px-0`}>
                     <span className='font-bold opacity-25'>03</span>
                     SPACE LAUNCH 101
