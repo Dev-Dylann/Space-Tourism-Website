@@ -27,7 +27,7 @@ export default function Destination({ searchParams }: Props) {
             {/* Background Image */}
             <div className="absolute top-0 left-0 w-full h-full -z-[1] bg-cover bg-[50%] bg-fixed" style={{ backgroundImage: "url('/assets/destination-bg-desktop.png')" }}></div>
 
-            <section className='grow flex flex-col gap-8 pt-28 pb-6 px-6 items-center md:pt-32 md:px-8 md:gap-12 md:pb-12 lg:px-10 lg:max-w-6xl lg:mx-auto lg:pt-40'>
+            <section className='grow flex flex-col gap-8 pt-28 pb-6 px-6 items-center md:pt-32 md:px-8 md:gap-12 md:pb-12 lg:px-10 lg:max-w-6xl lg:mx-auto lg:pt-48'>
                 <h1 className={`${barlowCondensed.className} flex gap-5 tracking-widest text-lg md:text-left md:w-full md:text-xl lg:text-[28px]`}>
                     <span className='font-bold opacity-25'>01</span>
                     PICK YOUR DESTINATION

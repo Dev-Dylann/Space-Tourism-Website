@@ -32,14 +32,14 @@ export default function CrewInfo({ children, crewMember }: Props) {
     }, [crewMember])
 
     return (
-        <div className='flex flex-col gap-8 md:gap-12 items-center lg:grid lg:grid-cols-2 lg:grid-rows-[1fr,_auto] lg:my-auto'>
+        <div className='flex flex-col gap-8 items-center lg:grid lg:grid-cols-2 lg:grid-rows-[1fr,_auto] lg:gap-12 lg:my-auto'>
             <article className="flex flex-col gap-4 items-center text-center my-5 transition-all duration-500 md:max-w-[75vw] lg:items-start lg:text-left lg:h-full lg:justify-center" style={fade ? { opacity: 0 } : { opacity: 1 }}>
                 <h2 className={`${bellefair.className} text-2xl md:text-4xl`}>
                     <span className='opacity-50 block text-xl md:text-2xl md:pb-4'>{data.role.toUpperCase()}</span>
                     {data.name.toUpperCase()}
                 </h2>
 
-                <p className="leading-8 text-blue-300">{data.bio}</p>
+                <p className="leading-8 text-blue-300 md:text-lg md:leading-10">{data.bio}</p>
             </article>
 
             {children}

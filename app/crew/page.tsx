@@ -27,7 +27,7 @@ export default function Crew({ searchParams }: Props) {
                 className="-z-[1] bg-fixed"
             ></Image>
 
-            <section className="grow flex flex-col gap-8 pt-28 pb-6 px-6 items-center md:pt-32 md:px-8 md:gap-12 md:pb-12 lg:px-10 lg:max-w-6xl lg:mx-auto lg:pt-40">
+            <section className="grow flex flex-col gap-8 pt-28 pb-6 px-6 items-center md:pt-32 md:px-8 md:gap-12 md:pb-12 lg:px-10 lg:max-w-6xl lg:mx-auto lg:pt-48">
                 <h1 className={`${barlowCondensed.className} flex gap-5 tracking-widest text-lg md:text-left md:w-full md:text-xl lg:text-[28px]`}>
                     <span className='font-bold opacity-25'>02</span>
                     MEET YOUR CREW
