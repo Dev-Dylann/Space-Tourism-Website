@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { usePathname } from "next/navigation"
+import Image from "next/image"
 import MobileNav from "./MobileNav"
 import { barlowCondensed } from "../ui/fonts"
 import Link from "next/link"
@@ -15,10 +16,10 @@ export default function Header() {
 
     return (
         <header className={`${barlowCondensed.className} p-6 flex justify-between items-center fixed top-0 left-0 w-full z-20 md:justify-start md:p-0 lg:py-8 lg:justify-between xl:py-10`}>
-            <img src="/assets/logo.svg" alt="Logo" className='md:mx-8 md:my-6 lg:mx-12 xl:mx-16' />
+            <Image src="/assets/logo.svg" alt="Logo" width={48} height={48} className='md:mx-8 md:my-6 lg:mx-12 xl:mx-16' />
 
             <button onClick={() => setNavState(true)} className="px-2 rounded-md md:hidden">
-                <img src="/assets/hamburger.svg" alt="Menu Icon" />
+                <Image src="/assets/hamburger.svg" alt="Menu Icon" width={24} height={40} />
             </button>
 
             <MobileNav navState={navState} setNavState={setNavState} path={path} links={links} />

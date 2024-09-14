@@ -1,4 +1,3 @@
-import Image from "next/image";
 import data from '@/data.json'
 import Link from "next/link";
 import { barlowCondensed, bellefair } from "../ui/fonts";

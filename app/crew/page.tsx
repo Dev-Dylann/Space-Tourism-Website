@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import data from '@/data.json'
-import { barlowCondensed, bellefair } from "../ui/fonts";
+import { barlowCondensed } from "../ui/fonts";
 import CrewInfo from "./components/CrewInfo";
 
 type Props = {

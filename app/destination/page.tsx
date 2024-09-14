@@ -1,7 +1,6 @@
-import Image from "next/image";
 import data from '@/data.json'
 import Link from "next/link";
-import { barlowCondensed, bellefair } from "../ui/fonts";
+import { barlowCondensed } from "../ui/fonts";
 import DestinationInfo from "./components/DestInfo";
 
 type Props = {

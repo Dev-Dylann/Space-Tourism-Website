@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { usePathname } from "next/navigation";
+import Image from "next/image"
 
 type Props = {
     navState: boolean,
@@ -13,7 +13,7 @@ export default function MobileNav({ navState, setNavState, path, links }: Props)
     return (
         <aside className='fixed w-2/3 h-full top-0 -right-full backdrop-blur-2xl pl-8 py-6 flex flex-col gap-16 transition-all duration-[750ms] md:hidden' style={navState ? { transform: 'translateX(-150%)' } : {}}>
             <button onClick={() => setNavState(false)} className='p-2 w-fit mr-6 self-end rounded-md'>
-                <img src="/assets/xmark.svg" alt="Close Nav" />
+                <Image src="/assets/xmark.svg" alt="Close Nav" width={24} height={21} />
             </button>
 
             <nav>

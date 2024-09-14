@@ -29,7 +29,7 @@ export default function Home() {
           <p className={`${bellefair.className} text-[100px] md:text-[124px]`}>SPACE</p>
 
           <p className='leading-8 text-lg text-blue-300 md:px-10 md:text-base md:leading-10 lg:px-0'>
-            Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hiver kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!
+            Let&apos;s face it; if you want to go to space, you might as well genuinely go to outer space and not hiver kind of on the edge of it. Well sit back, and relax because we&apos;ll give you a truly out of this world experience!
           </p>
         </article>
 
